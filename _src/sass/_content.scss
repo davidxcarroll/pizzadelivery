@@ -1,0 +1,337 @@
+// STRUCTURE
+// ============================================================
+
+.bg-image-fade {
+	$fade-duration: 1s;
+  -webkit-animation: fade-in $fade-duration ease;
+  -moz-animation: fade-in ease-in-out $fade-duration both;
+  -ms-animation: fade-in ease-in-out $fade-duration both;
+  -o-animation: fade-in ease-in-out $fade-duration both;
+  animation: fade-in $fade-duration ease;
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {0%{opacity:0} 100%{opacity:1}}
+@-moz-keyframes fade-in {0%{opacity:0} 100%{opacity:1}}
+@-o-keyframes fade-in {0%{opacity:0} 100%{opacity:1}}
+@keyframes fade-in { 0%{opacity:0} 100%{opacity:1}}
+
+// CONTENT
+// ============================================================
+
+.hero-box {
+	@extend .content-light;
+	background-color: $blue;
+	font-size: .8em;
+	h1 {
+		text-transform: uppercase;
+	}
+}
+
+.hero-sub-box {
+	@extend .content-dark;
+	background-color: $white;
+}
+
+.bg-image-transparent {
+	.bg-image {
+		opacity: .6;
+	}
+}
+.bg-image-transparent-more {
+	.bg-image {
+		opacity: .1;
+	}
+}
+
+// BLOCKS
+// ============================================================
+
+@each $color in orange, blue, suds_1, suds_2, white, black, grey-dark, grey {
+  .basic-#{$color} {
+    @extend .bg-#{$color};
+  }
+}
+@each $color in orange, blue, suds_1, suds_2, black, grey-dark {
+  .basic-#{$color} {
+    @extend .content-light;
+    .btn-secondary {
+    	@extend .btn-white;
+    }
+  }
+}
+@each $color in white, grey {
+  .basic-#{$color} {
+    @extend .content-dark;
+    .btn-secondary {
+    	@extend .btn-blue;
+    }
+  }
+}
+@each $color in white, grey {
+  .basic-#{$color} {
+    @extend .content-dark;
+    .btn-primary {
+    	@extend .borderless;
+    }
+  }
+}
+
+.block-photo {
+	background-position: center center;
+	background-size: cover;
+}
+.block-photo-top {
+	background-position: top center;
+}
+
+// FAQ =======================
+
+.faq-list {
+	li {
+		@include margin(null null 1em);
+		font-family: $font-head;
+		font-size: 1.4em;
+		font-weight: bold;
+		line-height: 1.2em;
+		&.selected a {
+			color: $white;
+		}
+		a {
+			color: $blue;
+		}
+	}
+}
+
+.block-halves {
+	.faq-list {
+		@include media(max-width $desktop) {
+			@include display(none);
+		}
+	}
+	.faq-body {
+		@include media(max-width $desktop) {
+			@include fill-parent;
+		}
+		@include media(min-width $desktop) {
+			li {
+				@include margin(null null 2em);
+			}
+		}
+	}
+}
+
+.faq-list-fixed {
+	position: fixed;
+  top: 4.5em;
+  height: 100%;
+}
+
+// QUOTE =======================
+
+.block-quote {
+	.inner {
+		.content {
+			blockquote {
+				position: relative;
+				cite {
+					.cite-person {
+						font-weight: bold;
+					}
+					.cite-person,
+					.cite-title {
+						color: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cite-person {
+	font-weight: bold;
+}
+.cite-person,
+.cite-title {
+	color: inherit;
+}
+
+// TRUSTED BY =======================
+
+.trusted-by {
+	.trusted-by-list {
+		li {
+  		color: lighten($black, 30);
+  		font-family: $font-subhead;
+  		font-weight: 900;
+  		text-align: center;
+  		line-height: 1em;
+  		.client-logo {
+  			.client-aca {
+  				fill: lighten($black, 30);
+  			}
+  		}
+		}
+	}
+}
+
+.home-about-buckets {
+	.item {
+		h3 {
+			color: $blue;
+		}
+	}
+}
+
+.icon-bucket {
+	@include media(max-width $desktop) {
+		@include margin(0 null .5em);
+	}
+}
+
+// FORM - CONTACT =======================
+
+.form-contact {
+	label {
+		@extend h5;
+	}
+	input,
+	select,
+	textarea {
+		@include margin(null null 1.4em);
+		@include pad(1em);
+		font-family: $font-subhead;
+		font-weight: bold;
+		font-size: 1.6em;
+		background-color: $white;
+		box-shadow: none;
+		border: $stroke solid darken($white,15);
+		&:hover {
+			border: $stroke solid darken($white,20);
+		}
+		&:focus {
+			color: $black;
+			border: $stroke solid $suds1;
+			outline: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.page-template-redefine-form,
+.page-template-redefine-positions {
+	.ninja-forms-cont {
+		.text-wrap,
+		.list-dropdown-wrap,
+		.list-radio-wrap,
+		.checkbox-wrap {
+			@include media(min-width $tablet) {
+				@include span-columns(6);
+				@include omega(2n);
+			}
+		}
+	}
+}
+
+.ninja-forms-form-wrap select {
+	@include size(null 2.4em);
+}
+
+.ninja-forms-cont {
+	@extend .center;
+	font-family: $font-body;
+	label {
+		@include text-align(left);
+		@extend h6;
+	}
+	input[type=text],
+	input[type=radio],
+	select,
+	textarea {
+		@include margin(null null 0);
+		@include pad(.4em);
+		font-family: $font-subhead;
+		font-weight: bold;
+		font-size: 1.6em;
+		background-color: $white;
+		box-shadow: none;
+		border: $stroke solid darken($white,15);
+		&:hover {
+			border: $stroke solid darken($white,20);
+		}
+		&:focus {
+			color: $black;
+			border: $stroke solid $suds1;
+			outline: none;
+			box-shadow: none;
+		}
+	}
+	input[type=submit],
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	button,
+	.footer-newsletter-btn {
+		@extend .btn;
+		@extend .btn-orange;
+		@extend .btn-large;
+		&:hover {
+			background-color: $orange-hover;
+		}
+	}
+	.ninja-forms-required-items {
+		@include display(none);
+	}
+	.pre-form-message {
+		@extend .center;
+		@extend .padding;
+		p {
+			@include margin(0 0 1em);
+		}
+	}
+	.ninja-forms-success-msg {
+		@extend .padding;
+		// @extend .content-dark;
+		@extend .center;
+	}
+}
+
+.icon-bucket-image {
+	@include size(2em);
+	min-width: 120px;
+	min-height: 120px;
+}
+
+.message-sent-icon {
+	@include size(8em auto);
+}
+
+.ninja-forms-field-error {
+	@include display(inline-block);
+  @include margin(2em auto 0);
+  @include pad(.6em 2em);
+  @include corners(10em);
+  font-family: $font-subhead;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: $white;
+  @extend .drop-shadow;
+}
+
+.submit-wrap {
+	clear: both;
+}
+
+// WHATEVER =======================
+
+.svg {
+	@include size(6em);
+	@include margin(null auto 1em);
+}
+
+.svg-people,
+.svg-performance,
+.svg-purpose {
+	fill: $blue;
+}

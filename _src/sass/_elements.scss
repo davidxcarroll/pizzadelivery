@@ -1,0 +1,74 @@
+// NATIVE
+// ============================================================
+
+html {
+	text-rendering: optimizeLegibility;
+	font-smoothing: antialiased;
+}
+
+a * { transition: all .1s ease-in-out; }
+
+button:hover { cursor: pointer; }
+
+hr {
+	@include margin(3em 0);
+	@include pad(1em);
+	border-bottom: $stroke solid darken($white, 15);
+}
+
+// SELECTORS
+// ============================================================
+
+.hide {
+	@include display(none);
+}
+
+.padding {
+	@include media(min-width $tablet) {
+		@include pad(2em);
+	}
+	@include media(max-width $tablet) {
+		@include pad(1em);
+	}
+}
+.padding-x {
+	@include media(min-width $tablet) {
+		@include pad(0 2em);
+	}
+	@include media(max-width $tablet) {
+		@include pad(0 1em);
+	}
+}
+.padding-y {
+	@include media(min-width $tablet) {
+		@include pad(2em 0);
+	}
+	@include media(max-width $tablet) {
+		@include pad(1em null);
+	}
+}
+
+.drop-shadow  { box-shadow: 0 $stroke 0 rgba(0,0,0,.1); }
+.inner-shadow { box-shadow: inset 0 $stroke 0 rgba(0,0,0,.1); }
+
+.bg-black      { background-color: $black; }
+.bg-blue       { background-color: $blue; }
+.bg-suds_1     { background-color: $suds1; }
+.bg-suds_2     { background-color: $suds2; }
+.bg-grey       { background-color: lighten($black,65); }
+.bg-grey-dark  { background-color: lighten($black,10); }
+.bg-white      { background-color: $white; }
+
+// ICONS
+// ============================================================
+
+.icon-bucket {
+	@include media(min-width $mobile) {
+		@include size(6em);
+		@include margin(null auto 1em);
+	}
+	@include media(max-width $mobile) {
+		@include size(4em);
+		@include margin(null auto);
+	}
+}

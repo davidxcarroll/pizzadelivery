@@ -1,0 +1,138 @@
+// TYPE
+// ============================================================
+
+* {
+	color: $black;
+}
+
+a {
+	color: $orange;
+	text-decoration: none;
+	&:hover {
+		color: $orange-hover;
+	}
+}
+
+h1 {
+	@include margin(0 0 .2em);
+	font-family: $font-head;
+	line-height: 1em;
+	@include media(min-width $tablet) {
+		font-size: 3em;
+	}
+	@include media(max-width $tablet) {
+		font-size: 2.4em;
+	}
+	@include media(max-width $mobile-xs) {
+		font-size: 2em;
+	}
+}
+
+h2 {
+	@include margin(0 0 .4em);
+	font-weight: 400;
+	@include media(min-width $tablet) {
+		font-size: 2.2em;
+		line-height: 1.2em;
+	}
+	@include media(max-width $tablet) {
+		font-size: 1.8em;
+		line-height: 1em;
+	}
+	@include media(max-width $mobile-xs) {
+		font-size: 1.6em;
+	}
+}
+
+h3 {
+	@include margin(0 0 .4em);
+	font-weight: 700;
+	@include media(min-width $tablet) {
+		font-size: 1.8em;
+		line-height: 1em;
+	}
+	@include media(max-width $tablet) {
+		font-size: 1.6em;
+		line-height: 1em;
+	}
+}
+
+h4 {
+	font-size: 1.4em;
+}
+
+h5 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-subhead;
+}
+
+p,
+.content > ul li {
+	@include margin(1em null);
+	font-family: $font-body;
+	@include media(min-width $tablet) {
+		font-size: 1.2em;
+		line-height: 1.6em;
+	}
+	@include media(max-width $tablet) {
+		font-size: 1em;
+		line-height: 1em;
+	}
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.page-id-263 .content > ul li {
+	list-style: initial;
+	@include margin(null null null 1.4em);
+}
+
+blockquote {
+	@include margin(0 0 .6em);
+	@include pad(0);
+	h1 {
+		font-family: $font-body;
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+cite {
+	font-family: $font-subhead;
+	font-size: 1.4em;
+	font-style: normal;
+}
+
+// COLORS
+// ============================================================
+
+.content-dark {
+	h1 { color: $blue; }
+	h2,
+	h3, blockquote { color: $black; }
+	p, li, cite, h4, h5, h6 { color: transparentize($black, .3); }
+	.icon-svg, .svg-quote, .svg-quote-end { fill: $black; }
+}
+
+.content-light {
+	h1, h2, h3, h4, h5, h6, p, li, blockquote, cite { color: $white; }
+	.icon-svg, .svg-quote, .svg-quote-end { fill: $white; }
+}
+
+

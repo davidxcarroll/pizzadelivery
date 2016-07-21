@@ -1,0 +1,20 @@
+// MIXINS
+// ============================================================
+
+@each $direction in top, bottom, left, right {
+	.margin-#{$direction} {
+		margin-#{$direction}: .4em;
+	}
+}
+@each $direction in top, bottom, left, right {
+	.margin-big-#{$direction} {
+		margin-#{$direction}: 2em;
+	}
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

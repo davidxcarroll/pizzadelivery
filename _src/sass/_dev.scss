@@ -1,0 +1,33 @@
+// DEV
+// ============================================================
+
+// body {
+// 	background: darken($white, 20);
+// }
+
+.section {
+	@include outer-container;
+}
+
+code {
+	@include display(block);
+	@include margin(2em 0);
+	@include pad(0 2em);
+	@include text-align(center);
+	clear: both;
+	fieldset {
+		@include margin(0);
+		@include pad(0);
+		background: none;
+		border: none;
+		legend {
+			@include margin(null null 1em);
+		}
+		label {
+			display: inline-block;
+			@include margin(null .4em);
+			font-family: inherit;
+			font-weight: inherit;
+		}
+	}
+}

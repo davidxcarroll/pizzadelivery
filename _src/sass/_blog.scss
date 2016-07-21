@@ -1,0 +1,55 @@
+// BLOG =======================
+
+body.blog {
+	@include margin(0);
+}
+
+.blog-head {
+	z-index: 2;
+	.blog-head-link {
+		@include media(max-width $tablet) {
+			@include text-align(center);
+		}
+	}
+	.blog-head-logo img {
+		@include size(18em auto);
+	}
+	.blog-head-link {
+		a {
+			font-size: 1.2em;
+		}
+	}
+}
+
+.blog-content {
+	@include pad(0 0 4em);
+	.inner {
+		@include outer-container;
+		img {
+			@include size(100% auto);
+		}
+	} 
+}
+
+.blog-post-date p {
+	@include margin(0);
+	font-family: $font-utility;
+	font-size: .8em;
+	text-transform: uppercase;
+}
+
+.blog-pagination {
+	font-family: $font-utility;
+	text-transform: uppercase;
+	.navigation {
+		.next-posts,
+		.prev-posts {
+			@include display(inline-block);
+			a {
+				@include display(block);
+				@include pad(2em);
+				color: $white;
+			}
+		}
+	}
+}

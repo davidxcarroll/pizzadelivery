@@ -1,2 +1,2 @@
-# pizzadelivery
+# Pizza Delivery
 Web starter

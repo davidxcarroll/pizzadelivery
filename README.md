@@ -1,2 +1,0 @@
-# Pizza Delivery
-Web starter

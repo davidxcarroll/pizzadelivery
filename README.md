@@ -2,6 +2,6 @@
 
 Web starter 🍕
 
-Jade, SCSS, Gulp, pepperoni, cheese, red sauce.
+SCSS, Gulp, pepperoni, cheese, red sauce.
 
 Bye.

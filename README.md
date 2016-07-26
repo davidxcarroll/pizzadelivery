@@ -1,6 +1,6 @@
 # Pizza Delivery
 
-Web starter.
+Web starter 🍕
 
 Jade, SCSS, Gulp, pepperoni, cheese, red sauce.
 

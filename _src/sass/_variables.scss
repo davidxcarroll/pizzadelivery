@@ -1,24 +1,26 @@
+
 // VARIABLES
 // ============================================================
 
-$white:        #fff;
-$blue:         #406180;
-$red:          lighten(#843131,10);
-$cherry:       #672B3C;
-$cherry-light: lighten($cherry,50);
-$purple:       lighten(#351F3B,10);
-$tan:          #D8D2C5;
-$green:        #85A699;
-$yellow-green: #819627;
-$yellow:       darken(#FFE17B,10);
-$orange:       #FDA56C;
-$black:        #424243;
-$grey:         darken($white,10);
+$base-font-size:		16px;
 
-$desktop:      1100px;
-$tablet:       768px;
-$mobile:       420px;
-$mobile-xs:    320px;
+$white:							#FFFFFF;
+$blue:							#406180;
+$red:								#672B3C;
+$green:							#85A699;
+$orange:						#FDA56C;
+$grey:							lighten($white,20);
+$black:							#424243;
 
-$font-head:    'Homemade Apple', cursive;
-$font-body:    'Lato', sans-serif;
+$default-hover:			$blue;
+
+$desktop:						1140px;
+$tablet:						768px;
+$landscape:					600px;
+$mobile:						420px;
+$mobile-xs:					320px;
+
+$font-head:					sans-serif;
+$font-head-weight:	600;
+$font-body:    	 		serif;
+$font-body-weight:	100;

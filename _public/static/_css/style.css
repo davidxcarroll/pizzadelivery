@@ -583,35 +583,17 @@ h1, h2, h3, h4, h5, h6
 label,
 input,
 input[type="text"],
-textarea {
-  font-family: "Lato", sans-serif; }
-
-body,
-label,
-input,
-input[type="text"],
-textarea {
-  font-weight: 100; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; }
-
-a {
-  color: #672B3C; }
-  a:hover {
-    color: #8b3a51; }
-  a:focus {
-    outline: none; }
-
-p {
-  line-height: 1.6em; }
-
+textarea,
 button,
 input[type="submit"] {
-  font-family: "Lato", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  border-radius: .2em; }
+  font-family: sans-serif; }
+
+a {
+  color: #406180; }
+  a:hover {
+    color: #517ba2; }
+  a:focus {
+    outline: none; }
 
 @media screen and (min-width: 1100px) {
   .outer {

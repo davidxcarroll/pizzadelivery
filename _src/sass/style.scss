@@ -1,32 +1,25 @@
-// HTML 5 Boilerplate
 
-@import '_normalize';
-// @import '_boilerplate';
+// RESET
 
-// Bourbon and Neat
+// @import '_normalize';
+
+// LIBRARIES
 
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "base/base";
 
-// Dynamic
+// DYNAMIC
 
 @import "_variables";
 @import "_mixins";
+
+// GENERAL
+
+@import "_type";
 @import "_layout";
 
-// On the page
+// GLOBAL
 
-// @import "_content";
-// @import "_type";
-// @import "_buttons";
-// @import "_head";
-// @import "_footer";
-
-// External
-
-// @import "_blog";
-
-// Temp dev
-
-// @import "_dev";
+@import "_header";
+@import "_footer";

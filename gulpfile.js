@@ -11,6 +11,21 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./_public/_css'));
 });
 
+// JADE
+// ============================================================
+
+var jade = require('gulp-jade');
+ 
+gulp.task('templates', function() {
+  var YOUR_LOCALS = {};
+ 
+  gulp.src('./lib/*.jade')
+    .pipe(jade({
+      locals: YOUR_LOCALS
+    }))
+    .pipe(gulp.dest('./_public/'));
+});
+
 // WATCH
 // ============================================================
 

@@ -6,32 +6,31 @@ var gulp = require('gulp'),
 		sass = require('gulp-sass');
 
 gulp.task('sass', function() {
-    gulp.src('_src/sass/**/*.scss')
+    gulp.src('src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./_public/_css'));
+        .pipe(gulp.dest('./public/css'));
 });
 
-// JADE
+// PUG
 // ============================================================
 
-var jade = require('gulp-jade');
- 
-gulp.task('templates', function() {
-  var YOUR_LOCALS = {};
- 
-  gulp.src('./lib/*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS
-    }))
-    .pipe(gulp.dest('./_public/'));
+var gulp = require('gulp'),
+    pug = require('gulp-jade');
+
+// run this task by typing in gulp pug in CLI
+gulp.task('pug', function() {
+    return gulp.src('views/**/*.pug')
+        .pipe(pug()) // pipe to pug plugin
+        .pipe(gulp.dest('public/'));
 });
 
 // WATCH
 // ============================================================
 
 gulp.task('watch', function () {
-  gulp.watch(['./_public/*.html'], ['html']),
-  gulp.watch(['./_src/sass/**/*.scss'],['sass']);
+  gulp.watch(['./views/*.pug'], ['pug']),
+  gulp.watch(['./public/*.html'], ['html']),
+  gulp.watch(['./src/sass/**/*.scss'],['sass']);
 });
 
 // LIVE RELOAD
@@ -42,14 +41,15 @@ var gulp = require('gulp'),
 
 gulp.task('connect', function() {
   connect.server({
-    root: '_public',
+    root: 'public',
     livereload: true
   });
 });
 
 gulp.task('html', function () {
-  gulp.src('./_public/*.html')
+  gulp.src('./public/*.html')
     .pipe(connect.reload());
 });
  
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'watch', 'pug']);
+

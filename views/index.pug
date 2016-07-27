@@ -1,11 +1,11 @@
 extends layout
 
+//- MAIN CONTENT
+//- ============================================================
 block content
 
-	- var x = 5;
-	- for (var i=1; i<=x; i++) {
-		img(src="/static/img/za.gif")
-	- }
+	include ./includes/za
+
 	h1.
 		Oh, you're gonna be in a coma, all right. It's called 'taking advantage.'
 	h2.
@@ -21,7 +21,7 @@ block content
 	p.
 		I'm a monster. I don't understand the question, and I won't respond to it. As you may or may not know, Lindsay and I have hit a bit of a rough patch. I hear the jury's still out on science. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor.
 
-block footer
+	//- FOOTER
+	//- ============================================================
 
-	h1.
-		Footer
+	include ./includes/footer

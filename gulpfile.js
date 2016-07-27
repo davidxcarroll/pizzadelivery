@@ -16,17 +16,9 @@ gulp.task('sass', function() {
 // ============================================================
 
 var pug = require('gulp-pug');
- 
-// gulp.task('pug', function buildHTML() {
-//   return gulp.src('./views/**/*.pug')
-//   .pipe(pug({
-//     pretty: true
-//   }))
-//   .pipe(gulp.dest('./public'))
-// });
 
 gulp.task('pug', function() {
-  gulp.src('./views/**/*.pug')
+  gulp.src('./src/**/*.pug')
   .pipe(pug({
     pretty: true
   }))
@@ -37,7 +29,7 @@ gulp.task('pug', function() {
 // ============================================================
 
 gulp.task('watch', function() {
-  gulp.watch(['./views/**/*.pug'], ['pug']),
+  gulp.watch(['./src/**/*.pug'], ['pug']),
   gulp.watch(['./src/sass/**/*.scss'],['sass']);
 });
 
@@ -48,7 +40,7 @@ var connect = require('gulp-connect');
 
 gulp.task('connect', function() {
   connect.server({
-    root: 'public',
+    root: './public',
     livereload: true
   });
 });

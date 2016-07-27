@@ -315,18 +315,6 @@ a {
   .h5, h5 {
     font-size: 1.05em; } }
 
-@media screen and (min-width: 1140px) {
-  .outer {
-    padding: 4em 0 6em; } }
-
-@media screen and (max-width: 1140px) and (min-width: 768px) {
-  .outer {
-    padding: 2em 0 3em; } }
-
-@media screen and (max-width: 768px) {
-  .outer {
-    padding: 0; } }
-
 .inner {
   max-width: 68em;
   margin-left: auto;
@@ -335,10 +323,15 @@ a {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (max-width: 1140px) and (min-width: 420px) {
-    .inner {
-      width: 100%;
-      padding: 2em; } }
-  @media screen and (max-width: 420px) {
-    .inner {
-      padding: 1em; } }
+
+@media screen and (min-width: 1140px) {
+  .content {
+    padding: 2em 0 4em; } }
+
+@media screen and (max-width: 1140px) and (min-width: 768px) {
+  .content {
+    padding: 1em 0 2em; } }
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 0; } }

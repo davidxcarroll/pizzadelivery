@@ -1,18 +1,11 @@
-var express = require('express');
+// var express = require('express');
 
-var app = express();
+// var app = express();
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
 
-app.use('/static', express.static('public'));
+// app.use('/', express.static('public'));
 
-app.get('/', function (req, res) {
-	res.render('index', {
-		title: "Pizza Delivery",
-		message: "Charles has a licking problem."
-	});
-});
-
-app.listen(3000, function() {
-	console.log("listening on 3000");
-});
+// app.listen(3000, function() {
+// 	console.log("pizza time at 3000");
+// });

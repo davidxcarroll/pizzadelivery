@@ -2,24 +2,18 @@
 // STRUCTURE
 // ============================================================
 
-.outer {
+.outer { }
+
+.inner { @include outer-container; }
+
+.content {
 	@include media(min-width $desktop) {
-		@include pad(4em 0 6em);
+		@include pad(2em 0 4em);
 	}
 	@include media(max-width $desktop min-width $tablet) {
-		@include pad(2em 0 3em);
+		@include pad(1em 0 2em);
 	}
 	@include media(max-width $tablet) {
 		@include pad(0);
-	}
-}
-.inner {
-	@include outer-container;
-	@include media(max-width $desktop min-width $mobile) {
-		@include fill-parent;
-		@include pad(null 2em);
-	}
-	@include media(max-width $mobile) {
-		@include pad(null 1em);
 	}
 }

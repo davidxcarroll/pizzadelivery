@@ -2,25 +2,33 @@
 // VARIABLES
 // ============================================================
 
-$base-font-size:		16px;
+$base-font-size:			16px;
 
-$white:							#FFFFFF;
-$blue:							#406180;
-$red:								#672B3C;
-$green:							#85A699;
-$orange:						#FDA56C;
-$grey:							#DDDDDD;
-$black:							#424243;
+$red:									#f1453c;
+$orange:							#fd9726;
+$yellow:							#fed430;
+$green:								#68db30;
+$blue:								#3356fa;
+$purple:							#6121e6;
 
-$default-hover:			$blue;
+$white:								#ffffff;
+$grey-light:					#ebeef0;
+$grey:								#cfd8db;
+$black:								#37474f;
 
-$desktop:						1140px;
-$tablet:						768px;
-$landscape:					600px;
-$mobile:						420px;
-$mobile-xs:					320px;
+$default-link:				$red;
 
-$font-head:					sans-serif;
-$font-head-weight:	600;
-$font-body:    	 		sans-serif;
-$font-body-weight:	100;
+$desktop:							1140px;
+$tablet:							768px;
+$landscape:						600px;
+$mobile:							420px;
+$mobile-xs:						320px;
+
+// FONT STACK, FAMILIES AND WEIGHT
+
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:400,700i";
+
+$font-head:						"Roboto Mono", sans-serif;
+$font-head-weight:		600;
+$font-body:    	 			"Roboto Mono", sans-serif;
+$font-body-weight:		100;

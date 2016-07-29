@@ -4,6 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:400,700i";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -571,17 +572,18 @@ picture {
 .margin-big-right {
   margin-right: 2em; }
 
+.image-replace, .hero-za {
+  text-indent: -999em;
+  overflow: hidden; }
+
 body {
-  color: #424243;
+  color: #37474f;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 100; }
 
 * {
-  transition: all .15s ease-in-out; }
-
-body {
-  color: #406180; }
+  transition: all .1s ease-in-out; }
 
 label,
 input,
@@ -589,19 +591,19 @@ input[type="text"],
 textarea,
 button,
 input[type="submit"] {
-  font-family: sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 100; }
 
 a {
-  font-weight: 400;
-  color: #406180; }
+  font-weight: 600;
+  color: #f1453c; }
   a:hover {
-    color: #517ba2; }
+    color: #f4726c; }
   a:focus {
     outline: none; }
 
 .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
-  font-family: sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 600; }
 
 .h1, h1, .h2, h2 {
@@ -685,21 +687,10 @@ a {
     .inner {
       padding: 0 1em; } }
 
-.footer .inner {
-  padding: 4em 0;
-  text-align: center; }
-
-.footer-social ul li {
-  display: inline-block; }
-  .footer-social ul li a {
-    margin-left: 0.5em; }
-
-body {
-  background: #DDDDDD; }
-
 .hero {
+  color: #f1453c;
   text-align: center;
-  background: #FFFFFF; }
+  background: #ffffff; }
 
 .hero-content {
   float: left;
@@ -709,3 +700,29 @@ body {
   padding: 4em 0; }
   .hero-content:last-child {
     margin-right: 0; }
+
+.hero-za {
+  height: 5em;
+  width: auto;
+  background-image: url(../img/za.gif);
+  background-repeat: repeat-x; }
+
+.footer {
+  color: #f1453c; }
+  .footer .inner {
+    padding: 4em 0;
+    text-align: center; }
+
+@media screen and (min-width: 600px) {
+  .footer-social ul li {
+    display: inline-block; } }
+
+@media screen and (max-width: 600px) {
+  .footer-social ul li {
+    display: block; } }
+
+.footer-social ul li a {
+  margin-left: 0.5em; }
+
+body {
+  background: #fed430; }

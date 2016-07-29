@@ -19,3 +19,8 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+.image-replace {
+	text-indent: -999em;
+	overflow: hidden;
+}

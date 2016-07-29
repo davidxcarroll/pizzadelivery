@@ -1,15 +1,23 @@
 
 // FOOTER =======================
 
-.footer .inner {
-	@include pad(4em 0);
-	text-align: center;
+.footer {
+	color: $red;
+	.inner {
+		@include pad(4em 0);
+		text-align: center;
+	}
 }
 
 .footer-social {
 	ul {
 		li {
-			display: inline-block;
+			@include media(min-width $landscape) {
+				display: inline-block;
+			}
+			@include media(max-width $landscape) {
+				display: block;
+			}
 			a {
 				@include margin(null null null .5em);
 			}

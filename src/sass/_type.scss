@@ -5,10 +5,9 @@ body {
   font-weight: $font-body-weight;
 }
 
-*,
-a { transition: all .15s ease-in-out; }
+* { transition: all .15s ease-in-out; }
 
-body { color: black; }
+body { color: $blue; }
 
 label,
 input,
@@ -21,6 +20,7 @@ input[type="submit"] {
 }
 
 a {
+  font-weight: 400;
   color: $default-hover;
   &:hover { color: lighten($default-hover,10); }
   &:focus { outline: none; }

@@ -1,0 +1,16 @@
+
+// CONTENT =======================
+
+body {
+	background: $grey;
+}
+
+.hero {
+	text-align: center;
+	background: $white;
+}
+
+.hero-content {
+	@include span-columns(12);
+	@include pad(4em 0);
+}

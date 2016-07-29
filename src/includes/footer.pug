@@ -1,5 +1,15 @@
-div.outer
+mixin link(username, site)
+	li
+		a(href="http://" + site.toLowerCase() + ".com/" + username)= site
+
+div.outer.footer
 	div.inner
-		div.content
-			h1.
-				Delivery
+		div.content.footer-message
+			p.
+				Made by David Carroll
+		div.content.footer-social
+			ul
+				+link(facebook, "Facebook")
+				+link(twitter, "Twitter")
+				+link(instagram, "Instagram")
+				+link(linkedin, "Linkedin")

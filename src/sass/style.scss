@@ -1,7 +1,7 @@
 
 // RESET
 
-// @import 'normalize';
+@import 'normalize';
 
 // LIBRARIES
 
@@ -14,12 +14,13 @@
 @import "_variables";
 @import "_mixins";
 
-// GENERAL
+// GLOBAL
 
 @import "_type";
 @import "_layout";
-
-// GLOBAL
-
 @import "_header";
 @import "_footer";
+
+// GENERAL
+
+@import "_content";

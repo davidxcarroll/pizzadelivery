@@ -1,6 +1,17 @@
 
 var gulp = require('gulp')
 
+// PLUMBER
+// ============================================================
+
+var plumber = require('gulp-plumber');
+var coffee = require('gulp-coffee');
+ 
+gulp.src('./src/*.pug')
+    .pipe(plumber())
+    .pipe(coffee())
+    .pipe(gulp.dest('./public'));
+
 // SASS
 // ============================================================
 
@@ -25,6 +36,7 @@ gulp.task('pug', function() {
   .pipe(gulp.dest('./public'))
 });
 
+
 // WATCH
 // ============================================================
 
@@ -46,9 +58,11 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function () {
-  gulp.src('./public/*.html')
+  gulp.src('./public/**/*.html')
     .pipe(connect.reload());
 });
  
-gulp.task('default', ['connect', 'watch', 'pug']);
+// TRIGGER
+// ============================================================
 
+gulp.task('default', ['connect', 'watch', 'pug']);

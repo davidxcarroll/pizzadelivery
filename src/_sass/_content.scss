@@ -1,0 +1,19 @@
+
+// CONTENT =======================
+
+.za-hr {
+	@include size(auto 8em);
+	@extend .image-replace;
+	background-image: url(../img/za.gif);
+	background-repeat: repeat-x;
+}
+
+.github-link {
+	text-align: center;
+	.content-code
+		code {
+			@include margin(4em null null);
+			display: inline-block;
+			color: $blue;
+		}
+}

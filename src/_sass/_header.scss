@@ -11,10 +11,3 @@
 	@include span-columns(12);
 	@include pad(4em 0);
 }
-
-.hero-za {
-	@include size(auto 5em);
-	@extend .image-replace;
-	background-image: url(../img/za.gif);
-	background-repeat: repeat-x;
-}

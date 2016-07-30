@@ -572,7 +572,7 @@ picture {
 .margin-big-right {
   margin-right: 2em; }
 
-.image-replace, .hero-za {
+.image-replace, .za-hr {
   text-indent: -999em;
   overflow: hidden; }
 
@@ -590,7 +590,8 @@ input,
 input[type="text"],
 textarea,
 button,
-input[type="submit"] {
+input[type="submit"],
+code {
   font-family: "Roboto Mono", sans-serif;
   font-weight: 100; }
 
@@ -701,12 +702,6 @@ a {
   .hero-content:last-child {
     margin-right: 0; }
 
-.hero-za {
-  height: 5em;
-  width: auto;
-  background-image: url(../img/za.gif);
-  background-repeat: repeat-x; }
-
 .footer {
   color: #f1453c; }
   .footer .inner {
@@ -724,5 +719,15 @@ a {
 .footer-social ul li a {
   margin-left: 0.5em; }
 
-body {
-  background: #fed430; }
+.za-hr {
+  height: 8em;
+  width: auto;
+  background-image: url(../img/za.gif);
+  background-repeat: repeat-x; }
+
+.github-link {
+  text-align: center; }
+  .github-link .content-code code {
+    margin-top: 4em;
+    display: inline-block;
+    color: #3356fa; }

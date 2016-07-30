@@ -1,6 +1,6 @@
 mixin link(username, site)
 	li
-		a(href="http://" + site.toLowerCase() + ".com/" + username)= site
+		a(href="http://" + site.toLowerCase() + ".com/" + username target="_blank")= site
 
 div.outer.footer
 	div.inner
@@ -12,4 +12,5 @@ div.outer.footer
 				+link(facebook, "Facebook")
 				+link(twitter, "Twitter")
 				+link(instagram, "Instagram")
+				//- try to figure out adding "/in" before link
 				+link(linkedin, "Linkedin")

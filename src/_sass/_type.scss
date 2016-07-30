@@ -12,7 +12,8 @@ input,
 input[type="text"],
 textarea,
 button,
-input[type="submit"] {
+input[type="submit"],
+code {
   font-family: $font-body;
   font-weight: $font-body-weight;
 }

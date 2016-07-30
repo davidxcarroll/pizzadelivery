@@ -2,6 +2,6 @@
 
 Web starter 🍕
 
-Jade Puget, SCSS, Gulp, pepperoni, etc.
+Pug, SCSS, Gulp, pepperoni, etc.
 
 Bye.

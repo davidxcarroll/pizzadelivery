@@ -18,7 +18,7 @@ gulp.src('./src/*.pug')
 var sass = require('gulp-sass');
 
 gulp.task('sass', function() {
-    gulp.src('src/sass/**/*.scss')
+    gulp.src('src/_sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/css'));
 });
@@ -42,7 +42,7 @@ gulp.task('pug', function() {
 
 gulp.task('watch', function() {
   gulp.watch(['./src/**/*.pug'], ['pug']),
-  gulp.watch(['./src/sass/**/*.scss'],['sass']);
+  gulp.watch(['./src/_sass/**/*.scss'],['sass']);
 });
 
 // LIVE RELOAD
